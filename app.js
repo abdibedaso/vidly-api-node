@@ -6,6 +6,7 @@ const helmet = require("helmet");
 const debug = require('debug')('app:debug');
 
 const home = require('./routes/home');
+const genres = require('./routes/genres');
 
 if (app.get('env') == 'development') {
     console.log('Application Name: ' + config.get('name'));
@@ -17,6 +18,7 @@ app.use(express.static('public'));
 app.use(helmet());
 
 app.use('/', home);
+app.use('/api/genres', genres);
 
 const port = process.env.PORT || 3000; // PORT - Environment variable
 app.listen(port, () => console.log(`Listening on port ${port}...`));
