@@ -26,7 +26,7 @@ You should see the list of genres. That confirms that you have set up everything
 <br/>
 <br/>
 <div align="center">
-  <h4> jQuery powered applications </h4>
+  <h4> Vidly Api Node Express powered applications </h4>
   <hr/>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/abdibedaso/">
     <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
