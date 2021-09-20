@@ -5,6 +5,8 @@ const config = require('config');
 const helmet = require("helmet");
 const debug = require('debug')('app:debug');
 
+const home = require('./routes/home');
+
 if (app.get('env') == 'development') {
     console.log('Application Name: ' + config.get('name'));
     debug('Development environment...');
