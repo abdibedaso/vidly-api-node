@@ -16,5 +16,7 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(helmet());
 
+app.use('/', home);
+
 const port = process.env.PORT || 3000; // PORT - Environment variable
 app.listen(port, () => console.log(`Listening on port ${port}...`));
