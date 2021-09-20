@@ -25,4 +25,11 @@ router.post('/', (req, res) => {
     res.send(genre);
 });
 
+router.get('/:id', (req, res) => {
+    const genre = genres.find(c => c.id === parseInt(req.params.id));
+    if (!genre) return res.status(404).send('The genre with the given ID');
+
+    res.send(genre);
+});
+
 module.exports = router;
