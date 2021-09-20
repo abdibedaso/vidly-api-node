@@ -43,4 +43,14 @@ router.put('/:id', (req, res) => {
     res.send(genre);
 });
 
+router.delete('/:id', (req, res) => {
+    const genre = genres.find(c => c.id === parseInt(req.params.id));
+    if (!genre) return res.status(404).send('The genre with the given ID');
+
+    const index = genres.indexOf(genre);
+    genres.splice(index, 1);
+
+    res.send(genre);
+});
+
 module.exports = router;
